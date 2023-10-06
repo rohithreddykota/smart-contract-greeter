@@ -30,14 +30,14 @@ contract('Greeter', (accounts) => {
   describe('owner', () => {
     it('owner exists', async () => {
       const greeter = await GreeterContract.deployed();
-      const owner = await greeter.getOwner();
+      const owner = await greeter.owner();
 
       assert(owner, 'the current owner');
     });
 
     it('verify the owner', async () => {
       const greeter = await GreeterContract.deployed();
-      const expected = await greeter.getOwner();
+      const expected = await greeter.owner();
       const actual = accounts[0];
 
       assert.equal(expected, actual, "It's the owner");

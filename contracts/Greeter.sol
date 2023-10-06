@@ -26,7 +26,7 @@ contract Greeter {
     _greeting = greeting;
   }
 
-  function getOwner() public view returns(address) {
+  function owner() public view returns(address) {
     return _owner;
   }
 
